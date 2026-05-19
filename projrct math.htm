@@ -1,0 +1,851 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Emoji";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:11.0pt;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-MY style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>&lt;!DOCTYPE html&gt;</p>
+
+<p class=MsoNormal>&lt;html lang=&quot;en&quot;&gt;</p>
+
+<p class=MsoNormal>&lt;head&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;meta name=&quot;viewport&quot;
+content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;title&gt;Agrotech Bioscience: Derivative
+of Growth&lt;/title&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;!-- Tailwind CSS for styling --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;script
+src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;!-- Chart.js for interactive
+visualizations --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;script
+src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;!-- MathJax for rendering beautiful
+mathematical formulas --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;script
+src=&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;script id=&quot;MathJax-script&quot; async
+src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;!-- Google Fonts: Inter --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;link
+href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap&quot;
+rel=&quot;stylesheet&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;style&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; body {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-family:
+'Inter', sans-serif;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color:
+#f4fdf4;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #1a4d2e;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; .glass-panel {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background:
+rgba(255, 255, 255, 0.85);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; backdrop-filter:
+blur(10px);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: 1px solid
+rgba(255, 255, 255, 0.3);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 8px
+32px 0 rgba(31, 100, 48, 0.05);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; .fade-in {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; animation: fadeIn
+0.4s ease-in-out;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; @keyframes fadeIn {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; from { opacity: 0;
+transform: translateY(10px); }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; to { opacity: 1;
+transform: translateY(0); }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;/head&gt;</p>
+
+<p class=MsoNormal>&lt;body class=&quot;min-h-screen p-4 md:p-8&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;header class=&quot;max-w-7xl mx-auto mb-8
+text-center md:text-left&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h1 class=&quot;text-3xl
+md:text-5xl font-bold text-green-900 mb-2&quot;&gt;Agrotech Bioscience
+Model&lt;/h1&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-lg
+text-green-700&quot;&gt;Applying Calculus (Derivatives) to Livestock Growth
+Rates in Malaysia&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/header&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;main class=&quot;max-w-7xl mx-auto grid
+grid-cols-1 xl:grid-cols-12 gap-8&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- LEFT PANEL: Theory &amp;
+Context --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;xl:col-span-4 space-y-6&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;glass-panel rounded-2xl p-6&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;h2 class=&quot;text-xl font-bold mb-3 border-b border-green-200
+pb-2&quot;&gt;Bioscience Context&lt;/h2&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;p class=&quot;text-sm leading-relaxed mb-4&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; As an Agrotech student in Malaysia, optimizing the yield of local
+breeds is crucial. This model represents the weight gain of &lt;strong&gt;Ayam
+Kampung Kacukan (AKK)&lt;/strong&gt; over 16 weeks. </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;p class=&quot;text-xs text-green-600 italic bg-green-50 p-2
+rounded&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; Data Source Inspiration: Simulated based on generalized growth
+patterns from the </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;a href=&quot;#&quot; class=&quot;underline
+hover:text-green-800&quot;&gt;MARDI Animal Husbandry Dataset (Ayam Kampung
+Growth Performance)&lt;/a&gt;.</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;glass-panel rounded-2xl p-6&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;h2 class=&quot;text-xl font-bold mb-3 border-b border-green-200
+pb-2&quot;&gt;The Mathematics&lt;/h2&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;p class=&quot;text-sm mb-4&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; The growth can be modeled by a cubic polynomial function where \(
+x \) is the age in weeks, and \( f(x) \) is the body weight in grams.</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div class=&quot;bg-green-100 p-4 rounded-xl mb-4 text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;p class=&quot;font-semibold text-sm mb-1
+text-green-800&quot;&gt;Growth Function (Weight):&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;p class=&quot;text-lg overflow-x-auto&quot;&gt;\( f(x) =
+-0.5x^3 + 12x^2 + 20x + 40 \)&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;p class=&quot;text-sm mb-4&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; To find the &lt;strong&gt;rate of change&lt;/strong&gt; (how fast
+the chicken is growing at any exact moment), we find the derivative, \( f'(x)
+\).</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div class=&quot;bg-green-800 text-white p-4 rounded-xl text-center
+shadow-inner&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;p class=&quot;font-semibold text-sm mb-1
+text-green-200&quot;&gt;Derivative Function (Growth Rate):&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;p class=&quot;text-lg overflow-x-auto&quot;&gt;\( f'(x) =
+-1.5x^2 + 24x + 20 \)&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;glass-panel rounded-2xl p-6 bg-gradient-to-br from-green-50
+to-emerald-100&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;h3 class=&quot;font-bold text-green-900 mb-2 flex items-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;svg class=&quot;w-5 h-5 mr-2&quot; fill=&quot;none&quot;
+stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path
+stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;
+stroke-width=&quot;2&quot; d=&quot;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0
+9 9 0 0118 0z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; Instructions</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/h3&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;p class=&quot;text-sm text-green-800&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;strong&gt;Click anywhere on the blue curve&lt;/strong&gt; in
+the chart to calculate the derivative at that exact week. The app will draw a
+tangent line to visualize the instantaneous rate of change!</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- RIGHT PANEL: Interactive
+Chart &amp; Output --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;xl:col-span-8 space-y-6 flex flex-col&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Chart
+Container --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+class=&quot;glass-panel rounded-2xl p-4 md:p-6 flex-grow relative
+min-h-[400px]&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;canvas id=&quot;growthChart&quot;&gt;&lt;/canvas&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Dynamic
+Output Container (Changes on Click) --&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div
+id=&quot;outputBox&quot; class=&quot;glass-panel rounded-2xl p-6
+hidden&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div class=&quot;grid grid-cols-1 md:grid-cols-3 gap-4 mb-4&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div class=&quot;bg-blue-50 p-4 rounded-xl border
+border-blue-200 text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-xs text-blue-600 font-bold
+uppercase tracking-wide&quot;&gt;Selected Time (x)&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-2xl font-bold text-blue-900
+mt-1&quot;&gt;Week &lt;span id=&quot;out-week&quot;&gt;0&lt;/span&gt;&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div class=&quot;bg-green-50 p-4 rounded-xl border
+border-green-200 text-center&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-xs text-green-600 font-bold
+uppercase tracking-wide&quot;&gt;Current Weight (f(x))&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-2xl font-bold text-green-900
+mt-1&quot;&gt;&lt;span id=&quot;out-weight&quot;&gt;0&lt;/span&gt; g&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div class=&quot;bg-orange-50 p-4 rounded-xl border
+border-orange-200 text-center shadow-md transform scale-105&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-xs text-orange-600 font-bold
+uppercase tracking-wide&quot;&gt;Growth Rate (f'(x))&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-2xl font-bold
+text-orange-900 mt-1&quot;&gt;&lt;span
+id=&quot;out-rate&quot;&gt;0&lt;/span&gt; g/wk&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div class=&quot;bg-white p-5 rounded-xl border-l-4 border-green-500
+shadow-sm&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;h4 class=&quot;font-bold text-gray-800 mb-1&quot;&gt;<span
+style='font-family:"Segoe UI Emoji",sans-serif'>&#128104;&#8205;&#127806;</span>
+Agrotechnologist Analysis:&lt;/h4&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;p id=&quot;out-explanation&quot; class=&quot;text-gray-600
+text-sm leading-relaxed&quot;&gt;&lt;/p&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/main&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;script&gt;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; // Mathematical Functions</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; // Weight function: f(x) =
+-0.5x^3 + 12x^2 + 20x + 40</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; function calculateWeight(x) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return (-0.5 * Math.pow(x,
+3)) + (12 * Math.pow(x, 2)) + (20 * x) + 40;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; // Derivative function (Rate of
+growth): f'(x) = -1.5x^2 + 24x + 20</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; function calculateDerivative(x)
+{</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return (-1.5 *
+Math.pow(x, 2)) + (24 * x) + 20;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; // Generate data for weeks 0 to
+16</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; const labels = [];</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; const weightData = [];</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; for (let i = 0; i &lt;= 16; i++)
+{</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; labels.push(i);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+weightData.push(calculateWeight(i));</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; let myChart;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; const ctx =
+document.getElementById('growthChart').getContext('2d');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; const initialConfig = {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type: 'line',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; data: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+labels: labels,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+datasets: [</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; label: 'AKK Body Weight (g)',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; data: weightData,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; borderColor: '#2563eb', // Blue</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; backgroundColor: 'rgba(37, 99, 235, 0.1)',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; borderWidth: 3,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; pointBackgroundColor: '#fff',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; pointBorderColor: '#2563eb',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; pointRadius: 5,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; pointHoverRadius: 8,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; fill: true,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; tension: 0.4 // Smooth curve</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; // Hidden dataset for the tangent line, updated on
+click</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; label: &quot;Instantaneous Growth Rate
+(Tangent)&quot;,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; data: Array(17).fill(null), </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; borderColor: '#ea580c', // Orange</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; borderWidth: 3,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; borderDash: [5, 5],</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; pointRadius: 0,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; fill: false,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; tension: 0 </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; options: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+responsive: true,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+maintainAspectRatio: false,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+interaction: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; mode: 'index',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; intersect: false,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+plugins: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; title: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; display: true,</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; text: 'Ayam Kampung Kacukan (AKK) Growth Curve
+(0-16 Weeks)',</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; font: { size: 16, family: 'Inter' }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; tooltip: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; callbacks: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label: function(context) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(context.datasetIndex
+=== 1) return null; // Hide tooltip for tangent</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return `Weight:
+${context.parsed.y.toFixed(1)} g`;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+scales: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; x: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; title: { display: true, text: 'Age (Weeks)', font:
+{weight: 'bold'} }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; y: {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; title: { display: true, text: 'Body Weight
+(grams)', font: {weight: 'bold'} },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; suggestedMin: 0</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+onClick: (e, elements) =&gt; {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; if (elements.length &gt; 0) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; const dataIndex = elements[0].index;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; const week = labels[dataIndex];</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; handleGraphClick(week);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; };</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; myChart = new Chart(ctx,
+initialConfig);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; function handleGraphClick(x) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const weight =
+calculateWeight(x);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const rate =
+calculateDerivative(x);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Update DOM
+elements</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById('out-week').innerText
+= x;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+document.getElementById('out-weight').innerText = weight.toFixed(1);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+document.getElementById('out-rate').innerText = rate.toFixed(1);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Generate Layman
+Explanation based on the derivative (rate of change)</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const
+explanationEl = document.getElementById('out-explanation');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let explanation =
+&quot;&quot;;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (x &lt; 8) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+explanation = `At week ${x}, the chicken is growing at a rate of
+&lt;strong&gt;${rate.toFixed(1)} grams per week&lt;/strong&gt;. Because \(
+f''(x) \) is still positive, the growth rate is accelerating.
+&lt;strong&gt;Agrotech insight:&lt;/strong&gt; This is the crucial starter
+phase. High protein feed is essential here because the bird is rapidly building
+bone and muscle structure.`;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else if (x ===
+8) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+explanation = `At week ${x}, we hit the inflection point! The growth rate is at
+its absolute peak: &lt;strong&gt;${rate.toFixed(1)} grams per
+week&lt;/strong&gt;. &lt;strong&gt;Agrotech insight:&lt;/strong&gt; The chicken
+is gaining weight faster now than at any other point in its life. Nutrient
+absorption is at its maximum efficiency.`;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else if (x &gt;
+8 &amp;&amp; x &lt; 15) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+explanation = `At week ${x}, the chicken is still growing (adding
+&lt;strong&gt;${rate.toFixed(1)} grams per week&lt;/strong&gt;), but the rate
+is slowing down (decelerating). &lt;strong&gt;Agrotech insight:&lt;/strong&gt;
+The bird is approaching mature weight. Feed conversion ratio (FCR) is dropping,
+meaning it costs more feed to produce the same weight gain. Time to plan for
+harvest soon!`;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+explanation = `At week ${x}, the growth rate has plummeted to just
+&lt;strong&gt;${rate.toFixed(1)} grams per week&lt;/strong&gt;. The curve is
+flattening out. &lt;strong&gt;Agrotech insight:&lt;/strong&gt; Keeping the
+chickens past this point is economically inefficient. They are consuming feed
+just for maintenance, not growth. This is the optimal time for market sale.`;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+explanationEl.innerHTML = explanation;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Update Tangent
+Line on the Chart</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Tangent line
+equation: y - y1 = m(x - x1) &nbsp;=&gt; &nbsp;y = m(x - x1) + y1</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const
+newTangentData = Array(17).fill(null);</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Draw a line
+segment spanning 4 weeks (x-2 to x+2) to show the slope</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (let i =
+Math.max(0, x - 2); i &lt;= Math.min(16, x + 2); i++) {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+newTangentData[i] = (rate * (i - x)) + weight;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; myChart.data.datasets[1].data
+= newTangentData;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; myChart.update();</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Reveal and
+animate output box</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const outputBox =
+document.getElementById('outputBox');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+outputBox.classList.remove('hidden');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Retrigger CSS
+animation</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+outputBox.classList.remove('fade-in');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; void
+outputBox.offsetWidth; // Trigger reflow</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+outputBox.classList.add('fade-in');</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; &lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;/body&gt;</p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
+
+<p class=MsoNormal><span lang=MS>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
